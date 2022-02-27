@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+Skrive inn Måned:<input id="input"  />
+                <button id="Temperatur" onclick="finnTemperatur()">Temperatur</button>
+                <div id="ut"></div>
+<script type="application/javascript">
+    function finnTemperatur(){
+        const url="/?maned="+$("#input").val();
+        $.get(url,function (data){
+            $("#ut").html(data);
+        })
+    }
+</script>
+</body>
+</html>
